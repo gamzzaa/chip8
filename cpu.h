@@ -3,7 +3,7 @@
 
 namespace cpu
 {
-  typedef char u8;
+  typedef unsigned char u8;
   typedef short int u16;
   
   struct registers
