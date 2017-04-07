@@ -26,6 +26,8 @@ namespace cpu
     u8 VF;
     u16 I;
   };
+
+  u16 stack[16];
 }
 
 #endif //> CPU_H_
