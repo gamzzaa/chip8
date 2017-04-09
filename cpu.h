@@ -30,9 +30,11 @@ namespace cpu
   };
 
   static u16 PC = 0x0;  //> program counter - store the currently executing address
-
   static u8 SP = 0x0;  //> stack pointer - used to point to the topmost level of the stack
-  u16 stack[STACK_SIZE];
-}
+
+  static u16 stack[STACK_SIZE];
+
+  void execute();
+ }
 
 #endif //> CPU_H_
