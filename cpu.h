@@ -6,9 +6,9 @@ namespace cpu
   typedef unsigned char u8;
   typedef short int u16;
 
-  static const unsigned int STACK_SIZE = 16;
+  static const unsigned int kStackSize = 16;
   
-  struct registers
+  struct Registers
   {
     u8 V0;
     u8 V1;
@@ -32,7 +32,7 @@ namespace cpu
   static u16 PC = 0x0;  //> program counter - store the currently executing address
   static u8 SP = 0x0;  //> stack pointer - used to point to the topmost level of the stack
 
-  static u16 stack[STACK_SIZE];
+  static u16 stack[kStackSize];
 
   void execute();
  }

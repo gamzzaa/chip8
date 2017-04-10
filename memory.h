@@ -31,9 +31,9 @@ namespace memory
 {
 
   typedef char u8;
-  static const unsigned int MEM_SIZE = 4096;
+  static const unsigned int kMemorySize = 4096;
 
-  u8 ram[MEM_SIZE];
+  u8 ram[kMemorySize];
 
 }
 
