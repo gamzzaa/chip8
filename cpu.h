@@ -71,9 +71,16 @@ namespace cpu
     LDx65
   };
 
-  void fetch();
-  void decode();
-  void execute();
+  struct Instruction
+  {
+    OpCode opcode;
+    u8 operand1;
+    u8 operand2;
+  };
+
+  void Fetch();
+  Instruction* Decode(u16 rawInstruction);
+  void Execute(OpCode opcode, u8 op1, u8 op2);
  }
 
 #endif //> CPU_H_
