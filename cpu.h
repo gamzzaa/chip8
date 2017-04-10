@@ -6,8 +6,6 @@ namespace cpu
   typedef unsigned char u8;
   typedef short int u16;
 
-  static const unsigned int kStackSize = 16;
-  
   struct Registers
   {
     u8 V0;
@@ -32,8 +30,49 @@ namespace cpu
   static u16 PC = 0x0;  //> program counter - store the currently executing address
   static u8 SP = 0x0;  //> stack pointer - used to point to the topmost level of the stack
 
+  static const unsigned int kStackSize = 16;
   static u16 stack[kStackSize];
 
+  enum OpCode
+  {
+    SYS,
+    CLS,
+    RET,
+    JP,
+    CALL,
+    SExkk,
+    SNExkk,
+    SExy,
+    LDxkk,
+    ADDxkk,
+    LDxy,
+    OR,
+    AND,
+    XOR,
+    ADDxy,
+    SUB,
+    SHR,
+    SUBN,
+    SHL,
+    SNExy,
+    LDnnn,
+    JPnnn,
+    RND,
+    DRW,
+    SKP,
+    SKNP,
+    LDx,
+    LDx15,
+    LDx18,
+    ADDx,
+    LDx29,
+    LDx33,
+    LDx55,
+    LDx65
+  };
+
+  void fetch();
+  void decode();
   void execute();
  }
 

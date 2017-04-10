@@ -2,10 +2,18 @@
 
 namespace cpu
 {
+  void fetch()
+  {
 
-  void execute()
+  }
+
+  void decode()
   {
 
   }
   
+  void execute()
+  {
+
+  }
 }
