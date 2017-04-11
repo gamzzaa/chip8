@@ -33,8 +33,9 @@ namespace memory
   typedef char u8;
   static const unsigned int kMemorySize = 4096;
 
-  u8 ram[kMemorySize];
-
+  u8 RAM[kMemorySize];
+  
+  void Load(std::string& file);
 }
 
 #endif

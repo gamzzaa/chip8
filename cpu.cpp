@@ -19,6 +19,8 @@ namespace cpu
     {
     case SYS:
       break;
+    default:
+      break;
     }
   }
   /*
